@@ -1,9 +1,9 @@
-import Header from "./Component/Shear/Header/Header";
+import BannerSection from "./Component/Home/BannerSection/BannerSection";
 
 function App() {
   return (
     <div>
-      <Header />
+      <BannerSection />
     </div>
   );
 }

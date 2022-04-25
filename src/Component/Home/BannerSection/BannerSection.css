@@ -1,0 +1,17 @@
+.banner-container {
+  background: url(../../../Assets/images/banner.png) center center/cover
+    no-repeat;
+  height: 80vh;
+  width: 100%;
+  object-fit: contain;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+}
+
+.banner-text {
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
