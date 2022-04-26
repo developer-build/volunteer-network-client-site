@@ -29,10 +29,12 @@ const Header = () => {
                 Blogs
               </Link>
             </Nav>
-            <Link to="/sigh-up">
+            <Link to="/sigh-up" style={{ textDecoration: "none" }}>
               <button className="registerBtn">Register</button>
             </Link>
-            <button className="adminBtn">Admin</button>
+            <Link to="/admin" style={{ textDecoration: "none" }}>
+              <button className="adminBtn">Admin</button>
+            </Link>
           </Navbar.Collapse>
         </Container>
       </Navbar>
