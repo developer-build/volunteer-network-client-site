@@ -4,8 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../../Assets/logos/Group 1329.png";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../Firebase/Init";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const [user] = useAuthState(auth);
   return (
     <div>
       <Navbar bg="transparent" expand="lg">
@@ -29,9 +33,15 @@ const Header = () => {
                 Blogs
               </Link>
             </Nav>
-            <Link to="/sigh-up" style={{ textDecoration: "none" }}>
-              <button className="registerBtn">Register</button>
-            </Link>
+            {user ? (
+              <button onClick={() => signOut(auth)} className="registerBtn">
+                Sign Out
+              </button>
+            ) : (
+              <Link to="/sigh-up" style={{ textDecoration: "none" }}>
+                <button className="registerBtn">Register</button>
+              </Link>
+            )}
             <Link to="/admin" style={{ textDecoration: "none" }}>
               <button className="adminBtn">Admin</button>
             </Link>

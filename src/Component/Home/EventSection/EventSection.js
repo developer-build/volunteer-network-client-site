@@ -6,7 +6,7 @@ const EventSection = () => {
   const [events, setEvens] = useState([]);
 
   useEffect(() => {
-    fetch("FackeData.json")
+    fetch("http://localhost:5000/event")
       .then((res) => res.json())
       .then((data) => setEvens(data));
   }, []);
