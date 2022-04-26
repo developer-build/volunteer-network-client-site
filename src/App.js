@@ -1,10 +1,13 @@
-import BannerSection from "./Component/Home/BannerSection/BannerSection";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Component/Home/Home/Home";
 
 function App() {
   return (
-    <div>
-      <BannerSection />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
+    </>
   );
 }
 

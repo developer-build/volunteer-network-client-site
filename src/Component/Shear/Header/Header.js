@@ -3,6 +3,7 @@ import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../../Assets/logos/Group 1329.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -15,13 +16,21 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Donation</Nav.Link>
-              <Nav.Link href="#link">Events</Nav.Link>
-              <Nav.Link href="#link">Blogs</Nav.Link>
+              <Link to="/" className="link">
+                Home
+              </Link>
+              <Link to="/" className="link">
+                Donation
+              </Link>
+              <Link to="/" className="link">
+                Events
+              </Link>
+              <Link to="/" className="link">
+                Blogs
+              </Link>
             </Nav>
-            <button>Register</button>
-            <button>Admin</button>
+            <button className="registerBtn">Register</button>
+            <button className="adminBtn">Admin</button>
           </Navbar.Collapse>
         </Container>
       </Navbar>

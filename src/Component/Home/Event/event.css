@@ -1,0 +1,26 @@
+.event {
+  min-height: 350px;
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+.event-text {
+  background: #ffbd3e;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 320px;
+  border-radius: 0px 0px 10px 10px;
+  text-align: center;
+  padding: 15px 0;
+}
+.event-text p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #ffffff;
+}
