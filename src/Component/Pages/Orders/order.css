@@ -4,7 +4,6 @@
 }
 .order-content {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -56,4 +55,17 @@
   color: white;
   border: none;
   background: #3f90fc;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 650px) {
+  .order {
+    width: 100%;
+
+    padding: 20px;
+  }
+  .RegistrationBtn {
+    width: 30%;
+    display: inline;
+  }
 }

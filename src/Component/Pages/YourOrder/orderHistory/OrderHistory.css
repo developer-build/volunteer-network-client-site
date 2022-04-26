@@ -1,0 +1,30 @@
+.orderHistory {
+  background: #fff;
+  padding: 20px;
+}
+.orderHistory h5 {
+  font-weight: 900;
+  font-size: 21px;
+  line-height: 33px;
+
+  color: #0b0b0b;
+}
+.orderHistory h6 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+.orderHistory p {
+  text-align: right;
+  margin-top: 40px;
+}
+.orderHistory button {
+  width: 40%;
+  padding: 8px 0;
+  border: none;
+  background: #e3e3e3;
+  cursor: pointer;
+}

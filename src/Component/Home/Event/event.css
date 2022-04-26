@@ -1,8 +1,8 @@
 .event {
   min-height: 350px;
   position: relative;
-  width: 300px;
-  margin: 0 auto;
+  width: 280px;
+  margin: auto;
 }
 .event-text {
   background: #ffbd3e;

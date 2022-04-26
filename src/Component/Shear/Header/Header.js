@@ -23,9 +23,7 @@ const Header = () => {
               <Link to="/" className="link">
                 Home
               </Link>
-              <Link to="/" className="link">
-                Donation
-              </Link>
+
               <Link to="/" className="link">
                 Events
               </Link>
@@ -33,6 +31,13 @@ const Header = () => {
                 Blogs
               </Link>
             </Nav>
+            {user ? (
+              <Link to="/your-order" className="link">
+                Order
+              </Link>
+            ) : (
+              ""
+            )}
             {user ? (
               <button onClick={() => signOut(auth)} className="registerBtn">
                 Sign Out

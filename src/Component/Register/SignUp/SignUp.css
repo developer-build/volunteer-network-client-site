@@ -1,11 +1,11 @@
 .register-container {
   background: #f8fafc;
-  justify-content: center;
   width: 100%;
-  height: 100vh;
-  display: flex;
+  min-height: 600px;
   flex-direction: column;
   align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .sighUp {
   background: #ffffff;
@@ -13,7 +13,7 @@
   box-sizing: border-box;
   border-radius: 4px;
   width: 100%;
-  height: 100%;
+  height: 400px;
   margin-top: 50px;
   justify-content: center;
   padding: 30px;

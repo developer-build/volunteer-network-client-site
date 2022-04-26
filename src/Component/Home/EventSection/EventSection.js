@@ -14,7 +14,7 @@ const EventSection = () => {
   return (
     <div className="event-container">
       <div className="container">
-        <div className="row row-cols-lg-4 row-cols-md-2 gy-5 gx-4">
+        <div className="row row-cols-lg-4 row-cols-md-2 g-5 ">
           {events.map((event) => (
             <Event event={event} key={event._id}></Event>
           ))}
