@@ -29,7 +29,9 @@ const Header = () => {
                 Blogs
               </Link>
             </Nav>
-            <button className="registerBtn">Register</button>
+            <Link to="/sigh-up">
+              <button className="registerBtn">Register</button>
+            </Link>
             <button className="adminBtn">Admin</button>
           </Navbar.Collapse>
         </Container>

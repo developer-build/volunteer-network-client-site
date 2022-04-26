@@ -1,0 +1,46 @@
+.register-container {
+  background: #f8fafc;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sighUp {
+  background: #ffffff;
+  border: 1px solid #ababab;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  justify-content: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.googleBtn {
+  width: 100%;
+  margin-top: 20px;
+  background: #ffffff;
+  border: 1px solid #c7c7c7;
+  box-sizing: border-box;
+  border-radius: 57px;
+  height: 50px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #000000;
+}
+.sighUp p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
