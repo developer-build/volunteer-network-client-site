@@ -1,15 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
+import "./register.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDeleteLeft } from "@fortawesome/free-solid-svg-icons";
 
 const RegisterList = () => {
   const [order, setOrder] = useState([]);
+  const [reload, setReload] = useState(false);
+
   console.log(order);
 
   useEffect(() => {
     fetch(`http://localhost:5000/orders`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
-  }, []);
+  }, [reload]);
+
+  const deleteHandler = (id) => {
+    const confirm = window.confirm("are you sure");
+    if (confirm) {
+      const url = `http://localhost:5000/order/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setReload(!reload);
+        });
+    }
+  };
 
   return (
     <div>
@@ -33,7 +52,17 @@ const RegisterList = () => {
                   <td>{register.email}</td>
                   <td>{register.date}</td>
                   <td>{register.items}</td>
-                  <td>X</td>
+                  <td>
+                    <button
+                      onClick={() => deleteHandler(register._id)}
+                      className="registerBeleteButton"
+                    >
+                      <FontAwesomeIcon
+                        style={{ marginRight: "10px" }}
+                        icon={faDeleteLeft}
+                      />
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
