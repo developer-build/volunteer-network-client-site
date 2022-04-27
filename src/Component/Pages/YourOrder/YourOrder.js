@@ -11,7 +11,11 @@ const YourOrder = () => {
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/order?email=${user?.email}`)
+    fetch(`http://localhost:5000/order?email=${user?.email}`, {
+      headers: {
+        authorization: `${localStorage.getItem("token")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [user, reload]);

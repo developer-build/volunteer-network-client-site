@@ -8,14 +8,24 @@ import Spinners from "../../Shear/Spinner/Spinners";
 
 const Login = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-
+  console.log();
   let navigate = useNavigate();
   let location = useLocation();
 
-  let from = location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || "/order";
 
   if (user) {
     navigate(from, { replace: true });
+
+    fetch("http://localhost:5000/login", {
+      method: "POST",
+      body: JSON.stringify({ email: user?.user?.email }),
+      headers: {
+        "Content-type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => localStorage.setItem("token", json.token));
   }
 
   if (loading) {
