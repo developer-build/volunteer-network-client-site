@@ -11,11 +11,14 @@ const YourOrder = () => {
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/order?email=${user?.email}`, {
-      headers: {
-        authorization: `${localStorage.getItem("token")}`,
-      },
-    })
+    fetch(
+      `https://murmuring-journey-10809.herokuapp.com/order?email=${user?.email}`,
+      {
+        headers: {
+          authorization: `${localStorage.getItem("token")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [user, reload]);
@@ -24,7 +27,7 @@ const YourOrder = () => {
     console.log(id);
     const confirm = window.confirm("are you sure");
     if (confirm) {
-      const url = `http://localhost:5000/order/${id}`;
+      const url = `https://murmuring-journey-10809.herokuapp.com/order/${id}`;
       fetch(url, {
         method: "DELETE",
       })

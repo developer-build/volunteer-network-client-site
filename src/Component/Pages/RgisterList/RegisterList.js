@@ -11,7 +11,7 @@ const RegisterList = () => {
   console.log(order);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders`)
+    fetch(`https://murmuring-journey-10809.herokuapp.com/orders`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [reload]);
@@ -19,7 +19,7 @@ const RegisterList = () => {
   const deleteHandler = (id) => {
     const confirm = window.confirm("are you sure");
     if (confirm) {
-      const url = `http://localhost:5000/order/${id}`;
+      const url = `https://murmuring-journey-10809.herokuapp.com/order/${id}`;
       fetch(url, {
         method: "DELETE",
       })

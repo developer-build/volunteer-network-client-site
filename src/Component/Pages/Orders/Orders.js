@@ -13,7 +13,7 @@ const Orders = () => {
     const description = event.target.description.value;
     const items = event.target.items.value;
 
-    fetch("http://localhost:5000/order", {
+    fetch("https://murmuring-journey-10809.herokuapp.com/order", {
       method: "POST",
       body: JSON.stringify({
         name: name,

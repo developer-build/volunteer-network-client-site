@@ -6,7 +6,7 @@ const EventSection = () => {
   const [events, setEvens] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/event")
+    fetch("https://murmuring-journey-10809.herokuapp.com/event")
       .then((res) => res.json())
       .then((data) => setEvens(data));
   }, []);

@@ -17,7 +17,7 @@ const Login = () => {
   if (user) {
     navigate(from, { replace: true });
 
-    fetch("http://localhost:5000/login", {
+    fetch("https://murmuring-journey-10809.herokuapp.com/login", {
       method: "POST",
       body: JSON.stringify({ email: user?.user?.email }),
       headers: {

@@ -10,7 +10,7 @@ const AddEvent = () => {
     const description = events.target.description.value;
     const img = events.target.img.value;
 
-    fetch("http://localhost:5000/event", {
+    fetch("https://murmuring-journey-10809.herokuapp.com/event", {
       method: "POST",
       body: JSON.stringify({
         name: name,
