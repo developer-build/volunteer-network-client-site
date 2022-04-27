@@ -8,6 +8,8 @@ import RequireAuth from "./RequireAuth/RequireAuth";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import YourOrder from "./Component/Pages/YourOrder/YourOrder";
+import RegisterList from "./Component/Pages/RgisterList/RegisterList";
+import AddEvent from "./Component/Pages/AddEvent/AddEvent";
 
 function App() {
   return (
@@ -25,7 +27,10 @@ function App() {
           }
         ></Route>
         <Route path="/your-order" element={<YourOrder />}></Route>
-        <Route path="/admin" element={<Admin />}></Route>
+        <Route path="/admin" element={<Admin />}>
+          <Route path="register-list" element={<RegisterList />}></Route>
+          <Route path="add-event" element={<AddEvent />}></Route>
+        </Route>
       </Routes>
       <ToastContainer />
     </>
